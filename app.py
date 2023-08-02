@@ -9,9 +9,6 @@ import pickle
 import pandas as pd
 import os
 
-file_path = os.path.join("c:\\Users\\piypr\\Flask project\\Flask Project", "module.pkl")
-
-# Load the model using the absolute file path
 
 #------------------------------------------------------------------------------------------------------------------#
 
