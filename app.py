@@ -19,8 +19,7 @@ file_path = os.path.join("c:\\Users\\piypr\\Flask project\\Flask Project", "modu
 app= Flask(__name__)       #create an object of Flask class(constructor) for web application
 
 #load pickel file ( Load the pre-trained machine learning model)
-with open(file_path, "rb") as file:
-    model = pickle.load(file)
+model = pickle.load(open("module.pkl","rb"))
 
 
 #In Flask, the flash function is used to display a message to the user, and it requires the SECRET_KEY to be set in the Flask application configuration. The SECRET_KEY is used for encrypting the messages before storing them in the client's cookies.When the flash function is called, the message is stored in a special Flask session cookie, which is signed with the SECRET_KEY. When the user makes a subsequent request, the message is retrieved from the session cookie, decrypted using the SECRET_KEY, and displayed to the user.Therefore, the SECRET_KEY is an important security feature in Flask, and it should be kept secret and not shared with others. It's used to protect sensitive data, like the messages passed to the flash function, from being tampered with or viewed by unauthorized users.It is important to note that changing the secret key will invalidate all existing sessions.
